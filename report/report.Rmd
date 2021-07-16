@@ -1,0 +1,25 @@
+---
+title: "Uniform random number generator example"
+output:
+  rmarkdown::html_document:
+    toc: true
+    number_sections: true
+    css: style.css
+params:
+  seed: 1
+  n: 1
+  min: 0
+  max: 1
+---
+
+## Summary
+```{r}
+set.seed(params$seed)
+r <- runif(
+  n = as.integer(params$n),
+  min = as.numeric(params$min),
+  max = as.numeric(params$max)
+)
+summary(r)
+hist(r)
+```
