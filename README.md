@@ -51,8 +51,14 @@ e.g.
 	* "/home/rstudio/Data" = "whatever is written to this Docker container's folder will also appear in the local name space" . Anything the Docker container writes OUTSIDE of this path will NOT appear locally
 **From Windows Command Line**: `docker run -d --rm -p 28787:8787 --name hello-world -e USERID=$UID -e PASSWORD=SoSecret! -v C:\Users\your_user_name\Documents\GitHub\r_docker_hello\Data:/home/rstudio/Data rstudio/hello-world`
 
-### Debug Docker container by linking into terminal
+### Interact or debug Docker container by linking into terminal
 
 This will log you into the active container, allowing you to explore directories and execute code if necessary. For example, you can launch R or execute R commands to explore. 
 
 1. `docker exec -it <container-name> bash`	
+
+### Other Diagnostic/Helpful Commands
+
+* `docker info`
+* `docker image ls`
+* `docker container ls`
