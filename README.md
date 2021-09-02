@@ -55,7 +55,11 @@ e.g.
 
 This will log you into the active container, allowing you to explore directories and execute code if necessary. For example, you can launch R or execute R commands to explore. 
 
-1. `docker exec -it <container-name> bash`	
+1. Use Windows Command Line for the following commands
+2. `docker exec -it <container-name> bash`
+3. If a Shiny app isn't launching, check the logs
+	4. `cd var/log/shiny-server`	
+	5. `cat <log_name.log>`
 
 ### Other Diagnostic/Helpful Commands
 
